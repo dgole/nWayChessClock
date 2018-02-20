@@ -65,7 +65,7 @@ while True:
         tTurn = t1-t0
         tList[nPlayer] -= tTurn
         # end the game?
-        if cmdIn == "end": break;
+        if cmdIn == "end": break; break;
         # add increment to total time
         tList[nPlayer] += tIncrement
     nRound+=1
