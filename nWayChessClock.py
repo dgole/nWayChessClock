@@ -59,14 +59,27 @@ while True:
         stdout.write("%s\n\n" % outString)	
         stdout.flush()
         t0 = time.time() # time at start of player's turn
-        cmdIn = input("press enter to move on to the next player's turn ")
+        cmdIn = input("press enter to move on to the next player's turn \n type 'end' then press enter to end the game ")
         t1 = time.time() # time at end of player's turn
-        # calculate turn time, subtract from total time, add increment
+        # calculate turn time, subtract from total time
         tTurn = t1-t0
         tList[nPlayer] -= tTurn
-        tList[nPlayer] += tIncrement		
+        # end the game?
+        if cmdIn == "end": break;
+        # add increment to total time
+        tList[nPlayer] += tIncrement
     nRound+=1
 
+# end of the game output
+outString = "THE GAME IS OVER!"  
+stdout.write("%s\n\n" % outString)	
+for i in range(nPlayers):
+    mins = int(np.floor_divide(tList[i], 60))
+    secs = int(np.round(tList[i] - mins*60, 0))
+    outString = nameList[i].ljust(10) + "  " + str(mins) + "." + str(secs)
+    stdout.write("%s \n" % outString)
+stdout.flush()
+    
 
 
 
