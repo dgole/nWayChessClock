@@ -26,22 +26,26 @@ tTot0 = time.time()
 while True:
 # loop over players
     for nPlayer in range(len(nameList)):
+        # clear terminal output
         os.system('clear')
-        # announce last turn time
         if nRound > 1 or nPlayer > 0:
+            # print last turn time
             outString = nameList[nPlayer-1] + "'s turn took " + str(np.round(tTurn, 1)) + " seconds" 
-            stdout.write("%s\n" % outString)	
+            stdout.write("%s\n" % outString)
+            # print net change in time remaing for last player
             outString = nameList[nPlayer-1] + "'s total time changed by " + str(np.round(tIncrement-tTurn, 1)) + " seconds" 
             stdout.write("%s\n" % outString)
+            # print total time we've been playing
             outString = "We've been playing for " + str(int((time.time()-tTot0)/60.0)) + " minutes" 
             stdout.write("%s\n" % outString)
             outString = "_____________________________________________________" 
             stdout.write("%s\n\n" % outString)	
             stdout.flush()
-        # announce who's turn it is currently
+        # print who's turn it is currently
         outString = "Round " + str(nRound) + ", " + nameList[nPlayer] + "'s turn"
         stdout.write("%s\n\n" % outString)	
         stdout.flush()
+        # make table of time remaining, put a * next to the player whose turn it is
         for i in range(nPlayers):
             mins = int(np.floor_divide(tList[i], 60))
             secs = int(np.round(tList[i] - mins*60, 0))
@@ -54,9 +58,10 @@ while True:
             outString = "_____________________________________________________" 
         stdout.write("%s\n\n" % outString)	
         stdout.flush()
-        t0 = time.time()
+        t0 = time.time() # time at start of player's turn
         cmdIn = input("press enter to move on to the next player's turn...")
-        t1 = time.time()
+        t1 = time.time() # time at end of player's turn
+        # calculate turn time, subtract from total time, add increment
         tTurn = t1-t0
         tList[nPlayer] -= tTurn
         tList[nPlayer] += tIncrement		
