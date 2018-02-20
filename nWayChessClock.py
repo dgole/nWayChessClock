@@ -59,7 +59,7 @@ while True:
         stdout.write("%s\n\n" % outString)	
         stdout.flush()
         t0 = time.time() # time at start of player's turn
-        cmdIn = input("press enter to move on to the next player's turn...")
+        cmdIn = input("press enter to move on to the next player's turn ")
         t1 = time.time() # time at end of player's turn
         # calculate turn time, subtract from total time, add increment
         tTurn = t1-t0
