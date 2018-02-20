@@ -38,7 +38,7 @@ while True:
             # print total time we've been playing
             outString = "We've been playing for " + str(int((time.time()-tTot0)/60.0)) + " minutes" 
             stdout.write("%s\n" % outString)
-            outString = "_____________________________________________________" 
+            outString = "__________________________________________________" 
             stdout.write("%s\n\n" % outString)	
             stdout.flush()
         # print who's turn it is currently
@@ -55,7 +55,7 @@ while True:
                 stringPrefix = ' '	
             outString = stringPrefix + nameList[i].ljust(10) + "  " + str(mins) + "." + str(secs)
             stdout.write("%s \n" % outString)
-        outString = "_____________________________________________________" 
+        outString = "__________________________________________________" 
         stdout.write("%s\n\n" % outString)	
         stdout.flush()
         t0 = time.time() # time at start of player's turn
@@ -76,7 +76,7 @@ stdout.flush()
 os.system('clear')
 outString = "THE GAME IS OVER!"  
 stdout.write("%s\n" % outString)
-outString = "_____________________________________________________" 
+outString = "__________________________________________________" 
 stdout.write("%s\n\n" % outString)	
 outString = "full rounds played: " + str(nRound)
 stdout.write("%s\n" % outString)
@@ -84,7 +84,7 @@ outString = "total game time:    " + str(int((time.time()-tTot0)/60.0)) + " minu
 stdout.write("%s\n" % outString)
 outString = "time per round:     " + str(int((time.time()-tTot0)/nRound)) + " seconds" 
 stdout.write("%s\n" % outString)
-outString = "_____________________________________________________" 
+outString = "__________________________________________________" 
 stdout.write("%s\n\n" % outString)	
 
 for i in range(nPlayers):
@@ -93,7 +93,7 @@ for i in range(nPlayers):
     outString = nameList[i].ljust(10) + "  " + str(mins) + "." + str(secs)
     stdout.write("%s \n" % outString)
 
-outString = "_____________________________________________________" 
+outString = "__________________________________________________" 
 stdout.write("%s\n\n" % outString)	
 
 stdout.flush()
