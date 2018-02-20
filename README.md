@@ -1,7 +1,10 @@
 # nWayChessClock
 
-Run with python 3  
+Only tested with python 3 so far.
 
-Command line args are startTimeInSeconds incrementTimeInSeconds Player1Name Player2Name Player3Name ... 
+Command line args are startTimeInSeconds incrementTimeInSeconds player1Name player2Name player3Name ... 
 
-example: python3 nWayChessClock.py 300 120 Alice Bob Carol 
+example: python3 nWayChessClock.py 300 120 Alice Bob Carol
+
+known issues: 
+-When a player's total time remaining goes negative
