@@ -71,14 +71,13 @@ while True:
     if cmdIn == "end": break;
     nRound+=1
 
-# end of the game output
-stdout.write("a")	
+# end of the game output	
 stdout.flush()
 os.system('clear')
 outString = "THE GAME IS OVER!"  
+stdout.write("%s\n" % outString)
 outString = "_____________________________________________________" 
 stdout.write("%s\n\n" % outString)	
-stdout.write("%s\n" % outString)
 outString = "full rounds played: " + str(nRound)
 stdout.write("%s\n" % outString)
 outString = "total game time:    " + str(int((time.time()-tTot0)/60.0)) + " minutes" 
