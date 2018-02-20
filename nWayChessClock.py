@@ -55,7 +55,7 @@ while True:
                 stringPrefix = ' '	
             outString = stringPrefix + nameList[i].ljust(10) + "  " + str(mins) + "." + str(secs)
             stdout.write("%s \n" % outString)
-            outString = "_____________________________________________________" 
+        outString = "_____________________________________________________" 
         stdout.write("%s\n\n" % outString)	
         stdout.flush()
         t0 = time.time() # time at start of player's turn
@@ -74,18 +74,27 @@ while True:
 # end of the game output
 os.system('clear')
 outString = "THE GAME IS OVER!"  
+outString = "_____________________________________________________" 
+stdout.write("%s\n\n" % outString)	
 stdout.write("%s\n" % outString)
 outString = "full rounds played: " + str(nRound)
 stdout.write("%s\n" % outString)
-outString = "total game time: " + str(int((time.time()-tTot0)/60.0)) + " minutes" 
+outString = "total game time:    " + str(int((time.time()-tTot0)/60.0)) + " minutes" 
 stdout.write("%s\n" % outString)
-outString = "time per round: " + str(int((time.time()-tTot0)/nRound)) + " seconds" 
+outString = "time per round:     " + str(int((time.time()-tTot0)/nRound)) + " seconds" 
 stdout.write("%s\n" % outString)
+outString = "_____________________________________________________" 
+stdout.write("%s\n\n" % outString)	
+
 for i in range(nPlayers):
     mins = int(np.floor_divide(tList[i], 60))
     secs = int(np.round(tList[i] - mins*60, 0))
     outString = nameList[i].ljust(10) + "  " + str(mins) + "." + str(secs)
     stdout.write("%s \n" % outString)
+
+outString = "_____________________________________________________" 
+stdout.write("%s\n\n" % outString)	
+
 stdout.flush()
     
 
