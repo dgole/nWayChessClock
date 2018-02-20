@@ -28,6 +28,8 @@ while True:
     for nPlayer in range(len(nameList)):
         # clear terminal output
         os.system('clear')
+        outString = "__________________________________________________" 
+        stdout.write("%s\n\n" % outString)
         if nRound > 1 or nPlayer > 0:
             # print last turn time
             outString = nameList[nPlayer-1] + "'s turn took " + str(np.round(tTurn, 1)) + " seconds" 
@@ -74,6 +76,8 @@ while True:
 # end of the game output	
 stdout.flush()
 os.system('clear')
+outString = "__________________________________________________" 
+stdout.write("%s\n\n" % outString)
 outString = "THE GAME IS OVER!"  
 stdout.write("%s\n" % outString)
 outString = "__________________________________________________" 
