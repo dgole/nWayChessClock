@@ -65,7 +65,7 @@ while True:
         tTurn = t1-t0
         tList[nPlayer] -= tTurn
         tList[nPlayer] += tIncrement		
-        nRound+=1
+    nRound+=1
 
 
 
