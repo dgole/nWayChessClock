@@ -72,8 +72,15 @@ while True:
     nRound+=1
 
 # end of the game output
+os.system('clear')
 outString = "THE GAME IS OVER!"  
-stdout.write("%s\n\n" % outString)	
+stdout.write("%s\n" % outString)
+outString = "full rounds played: " + str(nRound)
+stdout.write("%s\n" % outString)
+outString = "total game time: " + str(int((time.time()-tTot0)/60.0)) + " minutes" 
+stdout.write("%s\n" % outString)
+outString = "time per round: " + str((time.time()-tTot0)/60.0/nRound) + " minutes" 
+stdout.write("%s\n" % outString)
 for i in range(nPlayers):
     mins = int(np.floor_divide(tList[i], 60))
     secs = int(np.round(tList[i] - mins*60, 0))
