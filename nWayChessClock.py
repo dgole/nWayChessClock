@@ -26,7 +26,7 @@ tTot0 = time.time()
 while True:
 # loop over players
     for nPlayer in range(len(nameList)):
-	    os.system('clear')
+        os.system('clear')
         # announce last turn time
         if nRound > 1 or nPlayer > 0:
             outString = nameList[nPlayer-1] + "'s turn took " + str(np.round(tTurn, 1)) + " seconds" 
