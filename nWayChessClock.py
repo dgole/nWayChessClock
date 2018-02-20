@@ -79,7 +79,7 @@ outString = "full rounds played: " + str(nRound)
 stdout.write("%s\n" % outString)
 outString = "total game time: " + str(int((time.time()-tTot0)/60.0)) + " minutes" 
 stdout.write("%s\n" % outString)
-outString = "time per round: " + str(int((time.time()-tTot0)/nRound) + " seconds" 
+outString = "time per round: " + str(int((time.time()-tTot0)/nRound)) + " seconds" 
 stdout.write("%s\n" % outString)
 for i in range(nPlayers):
     mins = int(np.floor_divide(tList[i], 60))
