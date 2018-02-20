@@ -72,6 +72,7 @@ while True:
     nRound+=1
 
 # end of the game output
+stdout.flush()
 os.system('clear')
 outString = "THE GAME IS OVER!"  
 outString = "_____________________________________________________" 
